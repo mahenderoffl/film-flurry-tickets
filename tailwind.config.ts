@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Cinema-specific colors
+				seat: {
+					available: 'hsl(var(--seat-available))',
+					selected: 'hsl(var(--seat-selected))',
+					occupied: 'hsl(var(--seat-occupied))',
+					vip: 'hsl(var(--seat-vip))'
+				},
+				cinema: {
+					gold: 'hsl(var(--cinema-gold))',
+					purple: 'hsl(var(--cinema-purple))',
+					blue: 'hsl(var(--cinema-blue))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
