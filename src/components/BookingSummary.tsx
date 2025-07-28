@@ -21,7 +21,7 @@ export const BookingSummary = ({
   onCancel 
 }: BookingSummaryProps) => {
   const totalAmount = selectedSeats.reduce((sum, seat) => sum + seat.price, 0);
-  const processingFee = 2.50;
+  const processingFee = 25;
   const finalAmount = totalAmount + processingFee;
 
   return (
@@ -66,7 +66,7 @@ export const BookingSummary = ({
                   </Badge>
                   <span className="capitalize">{seat.type}</span>
                 </span>
-                <span className="font-medium">${seat.price}</span>
+                <span className="font-medium">₹{seat.price}</span>
               </div>
             ))}
           </div>
@@ -78,16 +78,16 @@ export const BookingSummary = ({
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
             <span>Subtotal ({selectedSeats.length} tickets)</span>
-            <span>${totalAmount.toFixed(2)}</span>
+            <span>₹{totalAmount}</span>
           </div>
           <div className="flex justify-between text-sm">
             <span>Processing Fee</span>
-            <span>${processingFee.toFixed(2)}</span>
+            <span>₹{processingFee}</span>
           </div>
           <Separator />
           <div className="flex justify-between font-semibold text-lg">
             <span>Total</span>
-            <span className="text-cinema-gold">${finalAmount.toFixed(2)}</span>
+            <span className="text-cinema-gold">₹{finalAmount}</span>
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export const BookingSummary = ({
             onClick={onConfirmBooking}
             disabled={selectedSeats.length === 0}
           >
-            Confirm Booking - ${finalAmount.toFixed(2)}
+            Confirm Booking - ₹{finalAmount}
           </Button>
           <Button 
             variant="outline" 

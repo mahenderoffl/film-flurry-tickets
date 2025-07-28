@@ -71,7 +71,7 @@ export const SeatMap = ({ seatLayout, selectedSeats, onSeatSelect }: SeatMapProp
                       'relative text-xs font-medium',
                       getSeatStyle(seat)
                     )}
-                    title={`${row.row}${seat.number} - ${seat.type.toUpperCase()} - $${seat.price}`}
+                    title={`${row.row}${seat.number} - ${seat.type.toUpperCase()} - ₹${seat.price}`}
                   >
                     {seat.number}
                     
@@ -106,11 +106,11 @@ export const SeatMap = ({ seatLayout, selectedSeats, onSeatSelect }: SeatMapProp
         </div>
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 bg-cinema-purple/40 border border-cinema-purple rounded"></div>
-          <span>Premium (+$5)</span>
+          <span>Premium (+₹100)</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 bg-seat-vip/40 border border-seat-vip rounded"></div>
-          <span>VIP (+$15)</span>
+          <span>VIP (+₹250)</span>
         </div>
       </div>
     </div>
